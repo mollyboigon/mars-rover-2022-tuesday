@@ -74,6 +74,21 @@ figcaption {
 
 /** Container styles to keep content from becoming too wide or coming too close to
 * mobile edge */
+.container.image {
+    max-width: 1200px;
+    padding:0;
+}
+
+.container.image .caption,
+.container.image figcaption {
+    padding: 5px 10px;
+}
+
+.collage {
+        display: flex;
+        flex-wrap: wrap; /*tells flexbox to take instructions and go to a new line*/
+        justify-content: space-between;
+    }
 
 .container {
     width: 100%;
@@ -83,17 +98,20 @@ figcaption {
 }
 
 
+/*with chevron it only applies to children.*/
+.collage > .img {
+    flex-basis: calc(50% - 2.5px);
+}
+/*give me first two images and i'm going to do something with them. this is a selector*/
+.collage > .img:nth-child(1), /*comma is or operator*/
+.collage > .img:nth-child(2) {
+    margin-bottom: 5px;
+}
 /** Images are allowed to be a little wider when broken out into their own container */
 
-.container.image {
-    max-width: 1200px;
-    padding: 0;
-}
 
-.container.image .caption,
-.container.image figcaption {
-    padding: 5px 10px;
-}
+
+
 
 
 /*********************************************************************
