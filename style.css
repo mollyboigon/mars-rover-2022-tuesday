@@ -107,6 +107,48 @@ figcaption {
 .collage > .img:nth-child(2) {
     margin-bottom: 5px;
 }
+.dot{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+
+}
+.dot .inner, /*inner is nested inside of dot*/
+.dot .close {
+    display: none;
+}
+
+.pink {
+    background-color: rgba(240, 161, 175, 0.65);
+
+}
+
+.annotate {
+    position:relative;
+
+}
+
+#camera:not(.active) /*camera is an id, top and left are applying after. colon not active changes it so that it finds elemnt on the pag with class camera and doesn't have class camera and appliels these. if it has both it doesn't apply*/ {
+    top: 20%;
+    left: 31%
+}
+
+.dot.active{/*two classes*/
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.dot.active .inner, /*inner is nested inside of dot*/
+.dot.active .close {
+    display: block;
+}
 /** Images are allowed to be a little wider when broken out into their own container */
 
 
